@@ -1,11 +1,13 @@
+# netlify.toml - Clean configuration
+
 [build]
-  # Netlify не будет собирать фронтенд, так как он не нужен для бота
-  command = "# Не используем команду сборки Vite" 
-  publish = "dist" # Указываем папку, которая должна быть пустой
+  # Set a dummy command since we only deploy functions, not the React front-end
+  command = "#" 
+  publish = "dist" 
 
 [functions]
-  # Главное: указываем Netlify, где находятся исходники наших функций (webhook.ts)
+  # Directory where Netlify will find the TypeScript Serverless functions (webhook.ts)
   directory = "netlify/functions"
-  # Netlify сам скомпилирует TypeScript в JavaScript
+  # Compiler for TypeScript
   node_bundler = "esbuild"
-  node_version = "18" # Рекомендуемая версия Node.js для Serverless
+  node_version = "18"
