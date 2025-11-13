@@ -1,7 +1,14 @@
+# netlify.toml
+
 [build]
-  command = "#" 
-  publish = "dist" 
+  # 1. Указываем команду, которая всегда завершается успешно и пропускает сборку Vite.
+  command = "echo 'Serverless Function Deployment: Skipping React build.'"
+  # 2. Указываем фиктивную папку публикации.
+  publish = "temp-functions-deploy" 
 
 [functions]
+  # Netlify автоматически скомпилирует webhook.ts из этой папки.
   directory = "netlify/functions"
   node_bundler = "esbuild"
+  # Явно устанавливаем стабильную версию Node.js, чтобы избежать ошибок среды
+  node_version = "18"
