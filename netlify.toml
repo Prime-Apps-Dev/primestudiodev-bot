@@ -1,8 +1,0 @@
-[build]
-  command = "echo 'Skipping main build.'" 
-  publish = "temp-functions-deploy" 
-
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-  node_version = "18"
