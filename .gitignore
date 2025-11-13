@@ -1,0 +1,47 @@
+# Зависимости
+/node_modules
+/dist
+/build
+/temp
+/coverage
+
+# Локальная разработка и кэш Vite/npm
+.npm
+.npmrc
+.yarn
+.yarnrc
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# Конфигурационные файлы IDE (Visual Studio Code)
+.vscode
+.idea
+
+# Временные файлы TypeScript
+*.tsbuildinfo
+
+# Переменные окружения и секреты
+# ЭТО КРИТИЧЕСКИ ВАЖНО для токена бота!
+.env
+.env.local
+.env.*.local
+*.env
+
+# Сборка Vite/Фронтенд
+# Если вы используете Vite для фронтенда, и он собирает его в папку dist,
+# убедитесь, что /dist здесь, чтобы не коммитить собранный JS.
+/dist
+/out
+/public
+
+# Netlify Functions
+# Netlify компилирует TypeScript-файлы из папки netlify/functions 
+# и кладет результат в .netlify. Эту папку нужно игнорировать.
+/.netlify
+
+# Локальные файлы Telegraf (если используются)
+*.session
