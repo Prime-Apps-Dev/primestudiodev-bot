@@ -1,0 +1,11 @@
+[build]
+  # Netlify не будет собирать фронтенд, так как он не нужен для бота
+  command = "# Не используем команду сборки Vite" 
+  publish = "dist" # Указываем папку, которая должна быть пустой
+
+[functions]
+  # Главное: указываем Netlify, где находятся исходники наших функций (webhook.ts)
+  directory = "netlify/functions"
+  # Netlify сам скомпилирует TypeScript в JavaScript
+  node_bundler = "esbuild"
+  node_version = "18" # Рекомендуемая версия Node.js для Serverless
