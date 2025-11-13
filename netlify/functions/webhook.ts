@@ -5,7 +5,7 @@ import { Telegraf } from 'telegraf';
 // !!! ВАЖНО: Замените эти заглушки на свои данные !!!
 // (Вы уже подставили свои ID, это просто напоминание)
 const BOT_TOKEN = process.env.BOT_TOKEN || '8232714512:AAFegQAxLFgr6c-DbnaxyjbwOeCpoutF8h0'; 
-const ADMIN_CHAT_ID = process.env.ADMIN_CHAT_ID || '476032497';
+const ADMIN_CHAT_ID = process.env.ADMIN_CHAT_ID || '4760324917';
 // ----------------------------------------------------
 
 const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}`;
