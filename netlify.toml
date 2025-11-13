@@ -1,13 +1,7 @@
-# netlify.toml - Clean configuration
-
 [build]
-  # Set a dummy command since we only deploy functions, not the React front-end
   command = "#" 
   publish = "dist" 
 
 [functions]
-  # Directory where Netlify will find the TypeScript Serverless functions (webhook.ts)
   directory = "netlify/functions"
-  # Compiler for TypeScript
   node_bundler = "esbuild"
-  node_version = "18"
